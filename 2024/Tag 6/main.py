@@ -4,6 +4,7 @@ from collections import defaultdict
 from bisect import insort, bisect
 
 #Part 1
+# Berechnet die Anzahl der einzigartig besuchten Positionen, indem es ab '^' in einem Gitter navigiert.
 def part1(puzzle_input):
     grid = puzzle_input.split('\n')
     m, n = len(grid), len(grid[0])
@@ -29,6 +30,7 @@ def part1(puzzle_input):
     return len(visited)
 
 #Part 2
+# Identifiziert Hindernisse und mögliche Positionen, überprüft auf Schleifen im Gitter.
 def part2(puzzle_input):
     grid = puzzle_input.split('\n')
     m, n = len(grid), len(grid[0])

@@ -1,8 +1,8 @@
 from readFile import readFile
 
 #Part 1
+# Berechnet die Summe aller Zielwerte, die durch Addition oder Multiplikation erreicht werden können.
 def part1(puzzle_input):
-
     def is_valid(target, nums):
         n = len(nums)
         queue = [(1, nums[0])]
@@ -34,8 +34,8 @@ def part1(puzzle_input):
     return total
 
 #Part 2
+# Berechnet die Summe aller Zielwerte, die durch Addition, Multiplikation oder Verkettung erreicht werden können.
 def part2(puzzle_input):
-
     def is_valid(target, nums):
         n = len(nums)
         queue = [(1, nums[0])]

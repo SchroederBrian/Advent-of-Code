@@ -1,6 +1,7 @@
 import os
 from collections import Counter
 
+# Lädt Eingabedatei und prüft, ob die Datei existiert. Liest den Inhalt bei Erfolg.
 def readFile():
     current_dir = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(current_dir, 'input.txt')
@@ -14,6 +15,7 @@ def readFile():
         return None
 
 # Bob
+# Überprüft die Sicherheit der Zeilen basierend auf aufeinanderfolgenden Differenzen.
 def safeOrUnsafe(lines):
     result = 0
     for line in lines:
@@ -37,6 +39,7 @@ def safeOrUnsafe(lines):
     return result
 
 # Level 2 function with Problem Dampener
+# Versucht, unsichere Zeilen durch Entfernen eines Elements sicher zu machen.
 def safeOrUnsafeLvl2(lines):
     result = 0
     for line in lines:
@@ -50,8 +53,8 @@ def safeOrUnsafeLvl2(lines):
                     break
     return result
 
+# Prüft, ob eine Liste sicher ist, basierend auf Differenzen und steigendem oder fallendem Muster.
 def isSafe(line):
-    """Helper function to check if a line is safe."""
     if len(line) < 2:
         return False
     diffs = [line[i+1] - line[i] for i in range(len(line) - 1)]
@@ -60,6 +63,7 @@ def isSafe(line):
     return all_increasing or all_decreasing
 
 # Torf
+# Bewertet Zeilen auf Sicherheit mithilfe eines Vergleichsoperators.
 def safeOrUnsafe2(lines):
     result = 0
     for line in lines:
@@ -69,6 +73,7 @@ def safeOrUnsafe2(lines):
             result += 1 if checkSafe(line, lambda x, y: x < y) else 0
     return result
 
+# Überprüft Sicherheit basierend auf einem benutzerdefinierten Vergleich zwischen Elementen.
 def checkSafe(line, compare):
     check = False
     for i in range(0, len(line)-1):

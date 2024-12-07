@@ -1,6 +1,7 @@
 from readFile import readFile
 
 # Part 1
+# Zählt Vorkommen des Wortes 'XMAS' in verschiedenen Richtungen innerhalb eines Gitters.
 def part1(puzzle_input):
     rows = puzzle_input.split('\n')
     m = len(rows)
@@ -23,6 +24,7 @@ def part1(puzzle_input):
     return sum(count(r, c) for r in range(m) for c in range(n))
 
 # Part 2
+# Prüft auf ein spezifisches Muster um das Zeichen 'A' und zählt passende Vorkommen.
 def part2(puzzle_input):
     rows = puzzle_input.split('\n')
     m = len(rows)

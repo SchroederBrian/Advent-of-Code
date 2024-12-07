@@ -3,6 +3,8 @@ from readFile import readFile
 from collections import defaultdict
 import re
 
+# Part 1
+# Berechnet die Gesamtpunktzahl basierend auf Regeln und Seitenaktualisierungen.
 def part1(puzzle_input):
     rules, updates = puzzle_input.split('\n\n')
     preceding = defaultdict(set)
@@ -26,6 +28,8 @@ def part1(puzzle_input):
 
     return total
 
+# Part 2
+# Bewertet Seiten mit einer Neuordnung, falls erforderlich, und berechnet die Gesamtpunktzahl.
 def part2(puzzle_input):
     rules, updates = puzzle_input.split('\n\n')
     preceding = defaultdict(set)
